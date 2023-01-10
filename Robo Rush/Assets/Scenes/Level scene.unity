@@ -520,6 +520,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4077103467905640405, guid: bcda67f227b418a48a116537c3d68375,
+        type: 3}
+      propertyPath: maxHealt
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077103467905640405, guid: bcda67f227b418a48a116537c3d68375,
+        type: 3}
+      propertyPath: countCoinsPerKill
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4752144060765238083, guid: bcda67f227b418a48a116537c3d68375,
         type: 3}
       propertyPath: m_RootOrder
@@ -794,11 +804,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2691477063527416411, guid: 83a3f7bac08ced645b307a653268c633,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.99
-      objectReference: {fileID: 0}
     - target: {fileID: 3299588183687690984, guid: 83a3f7bac08ced645b307a653268c633,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -905,6 +910,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7945832149863133112, guid: 83a3f7bac08ced645b307a653268c633,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189518109367154067, guid: 83a3f7bac08ced645b307a653268c633,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189518109367154067, guid: 83a3f7bac08ced645b307a653268c633,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189518109367154067, guid: 83a3f7bac08ced645b307a653268c633,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
