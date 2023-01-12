@@ -15,9 +15,14 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        RecalculateHP();
         iPlayerDamage = FindObjectOfType<PlayerDamage>().GetComponent<IPlayerDamage>();
-        //FindObjectOfType<LevelBusst>().LevelBusstEvent.AddListener(RecalculateHP);
+    }
+
+    private void Start()
+    {
+        currentHealt = maxHealt;
+        FindObjectOfType<GameBust>().LevelBustEvent.AddListener(RecalculateHP);
+        RecalculateHP();
     }
 
     public void Attack()
@@ -28,7 +33,7 @@ public class Enemy : MonoBehaviour
     private void RecalculateHP()
     {
         currentHealt = maxHealt;
-        //curentHealt *= FindObjectOfType<LevelBusst>().GetMultiplyEnemyHP();
+        currentHealt *= FindObjectOfType<GameBust>().GetMultiplyEnemyHP();
         UpdateUI();
     }
 
@@ -59,6 +64,6 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Die");
         GetComponent<Collider>().enabled = false;
         FindObjectOfType<Bank>().AddCoin(countCoinsPerKill);
-        //FindObjectOfType<LevelBusst>().LevelBusstEvent.RemoveListener(RecalculateHP);
+        FindObjectOfType<GameBust>().LevelBustEvent.RemoveListener(RecalculateHP);
     }
 }

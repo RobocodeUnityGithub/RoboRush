@@ -1035,9 +1035,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1051883890}
+  - component: {fileID: 1051883893}
   - component: {fileID: 1051883891}
   - component: {fileID: 1051883889}
   - component: {fileID: 1051883888}
+  - component: {fileID: 1051883892}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1101,6 +1103,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   damageText: {fileID: 297785710}
+--- !u!114 &1051883892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051883887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375b54e1fae78f14cbf250020a792c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelBustText: {fileID: 2033157741}
+--- !u!114 &1051883893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051883887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a14478c2c480e45b32c93700d81217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplyEnemyHP: 1
+  LevelBustEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1093604892
 GameObject:
   m_ObjectHideFlags: 0
