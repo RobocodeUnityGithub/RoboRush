@@ -34,6 +34,11 @@ public class Bank : MonoBehaviour
         return false;
     }
 
+    public void GetAdsMoney()
+    {
+        FindObjectOfType<AdsManager>().ShowAd(this);
+    }
+
 
     private void UpdateUI()
     {

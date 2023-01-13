@@ -26,8 +26,9 @@ public class PlayerDamage : MonoBehaviour, IPlayerDamage
 
     public void AddDamage(int addDamage)
     {
-        damage = addDamage;
+        damage += addDamage;
         SaveDamage();
+        UpdateUI();
     }
 
     private void LoadDamage()
