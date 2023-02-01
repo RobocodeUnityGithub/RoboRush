@@ -9,11 +9,20 @@ public class ScoreCounter : Score
     [SerializeField] private float scoreMultiplier;
     private bool shouldCount = true;
     private float score;
+    private Pause pause;
+    private void Awake()
+    {
+        pause = FindObjectOfType<Pause>();
+        LoadScore();
+    }
 
     private void Update()
     {
-        if (!shouldCount) { return; }
-        Count();
+        if (pause.IsPause() == false)
+        {
+            if (!shouldCount) { return; }
+            Count();
+        }
     }
 
     public void CantCount()

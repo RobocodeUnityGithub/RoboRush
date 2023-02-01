@@ -17,6 +17,11 @@ public class LevelBust : GameBust
 
    private void LoadMultiplyEnemyHP()
    {
+        if (!PlayerPrefs.HasKey("MultiplyEnemyHP"))
+        {
+            PlayerPrefs.SetInt("MultiplyEnemyHP", multiplyEnemyHP);
+        }
+
         multiplyEnemyHP = PlayerPrefs.GetInt("MultiplyEnemyHP");
    }
 

@@ -43,6 +43,10 @@ public class CollisionHandler : MonoBehaviour
             hit.gameObject.GetComponent<Enemy>().Attack();
             Crash();
         }
+        else if (hit.gameObject.GetComponent<Obstacle>() != null)
+        {
+            Crash();
+        }
 
     }
 

@@ -7,7 +7,7 @@ public abstract class PlatformsSpawner : MonoBehaviour
     [SerializeField] protected Platform[] platforms;
     [SerializeField] protected Platform startPlatform;
     [SerializeField] protected int maxPlatformCount;
-    [SerializeField] protected float platformLenght;// в нашій грі довжина всі платформу буде однаковою
+    [SerializeField] protected float platformLenght;
     protected float spawnDirection;
 
     protected virtual void SpawnPlatform(Platform spawnPlatform)

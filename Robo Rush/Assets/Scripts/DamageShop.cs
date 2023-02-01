@@ -39,6 +39,10 @@ public class DamageShop : MonoBehaviour
 
     private void LoadDamageCost()
     {
+        if (!PlayerPrefs.HasKey("DamageCost"))
+        {
+            PlayerPrefs.SetInt("DamageCost", damageCost);
+        }
         damageCost = PlayerPrefs.GetInt("DamageCost");
     }
 

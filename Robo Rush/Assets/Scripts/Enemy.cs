@@ -6,21 +6,24 @@ using TMPro;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private TMP_Text healtText;
-    [SerializeField] private int maxHealt;
     [SerializeField] private int countCoinsPerKill;
-    [SerializeField] private int currentHealt;
+    [SerializeField] private int maxHealt;
+    [SerializeField] private int minHealt;
+    private int currentHealt;
+    private int maxCurrentHealt;
     private IPlayerDamage iPlayerDamage;
     private Animator animator;
 
     private void Awake()
     {
+        maxCurrentHealt = Random.Range(minHealt, maxHealt);
         animator = GetComponentInChildren<Animator>();
         iPlayerDamage = FindObjectOfType<PlayerDamage>().GetComponent<IPlayerDamage>();
     }
 
     private void Start()
     {
-        currentHealt = maxHealt;
+        currentHealt = maxCurrentHealt;
         FindObjectOfType<GameBust>().LevelBustEvent.AddListener(RecalculateHP);
         RecalculateHP();
     }
@@ -32,9 +35,15 @@ public class Enemy : MonoBehaviour
     
     private void RecalculateHP()
     {
-        currentHealt = maxHealt;
+        if(FindObjectOfType<GameBust>().GetMultiplyEnemyHP() == 0)
+        {
+           return;
+        }
+        currentHealt = maxCurrentHealt;
         currentHealt *= FindObjectOfType<GameBust>().GetMultiplyEnemyHP();
         UpdateUI();
+
+
     }
 
     private void UpdateUI()
@@ -65,5 +74,6 @@ public class Enemy : MonoBehaviour
         GetComponent<Collider>().enabled = false;
         FindObjectOfType<Bank>().AddCoin(countCoinsPerKill);
         FindObjectOfType<GameBust>().LevelBustEvent.RemoveListener(RecalculateHP);
+        healtText.enabled = false;
     }
 }

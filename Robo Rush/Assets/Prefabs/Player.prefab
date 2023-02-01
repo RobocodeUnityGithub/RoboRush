@@ -269,7 +269,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 282891019971362214}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
           m_MethodName: MovementSide
           m_Mode: 3
@@ -285,7 +285,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 282891019971362214}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
           m_MethodName: MovementSide
           m_Mode: 3
@@ -391,7 +391,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 282891019971362214}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
           m_MethodName: MovementSide
           m_Mode: 3
@@ -407,7 +407,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 282891019971362214}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
           m_MethodName: MovementSide
           m_Mode: 3
@@ -507,8 +507,8 @@ GameObject:
   m_Component:
   - component: {fileID: 282891019971362212}
   - component: {fileID: 1050763997}
-  - component: {fileID: 282891019971362214}
   - component: {fileID: 282891019971362213}
+  - component: {fileID: 6011108599826464513}
   m_Layer: 0
   m_Name: "\u0421haracter"
   m_TagString: Untagged
@@ -548,21 +548,6 @@ MonoBehaviour:
   indexMainScene: 0
   loadDelayCrash: 1
   loadDelayWin: 1
---- !u!114 &282891019971362214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282891019971362211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af8629a2d349314ba9f053345fda6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMove: 5
-  speedSide: 3
-  gravity: -9
 --- !u!143 &282891019971362213
 CharacterController:
   m_ObjectHideFlags: 0
@@ -575,12 +560,27 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6011108599826464513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282891019971362211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af8629a2d349314ba9f053345fda6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMove: 7
+  speedSide: 4
+  gravity: -9
 --- !u!1 &846838696837312184
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,6 +42,24 @@ public class InfinitePlatformsSpawner : PlatformsSpawner
         activePlatforms.Add(newPlatform);
     }
 
+    protected override void GenerateStart()
+    {
+        SpawnPlatform(startPlatform);
+        for (int i = 0; i < maxPlatformCount; i++)
+        {
+            if (currentCountToSpawnBust == maxCountToSpawnBust)
+            {
+                SpawnPlatform(bustPlatform);
+                currentCountToSpawnBust = 0;
+            }
+            else
+            {
+                SpawnPlatform(GetRandomPlatform());
+                currentCountToSpawnBust++;
+            }
+        }
+    }
+
     private void RemoveActivePlatforms()
     {
         GameObject lostPlatform = activePlatforms[0];

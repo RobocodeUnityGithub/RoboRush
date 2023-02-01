@@ -10,7 +10,7 @@ public interface IPlayerDamage
 
 public class PlayerDamage : MonoBehaviour, IPlayerDamage
 {
-    [SerializeField] private int damage;
+    [SerializeField] private int damage = 1;
     [SerializeField] TMP_Text damageText;
 
     private void Awake()
@@ -33,6 +33,11 @@ public class PlayerDamage : MonoBehaviour, IPlayerDamage
 
     private void LoadDamage()
     {
+        if (!PlayerPrefs.HasKey("Damage"))
+        {
+            PlayerPrefs.SetInt("Damage", damage);
+        }
+
         damage = PlayerPrefs.GetInt("Damage");
     }
 
