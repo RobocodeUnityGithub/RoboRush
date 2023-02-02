@@ -606,6 +606,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1157346824, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1157346824, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1157346824, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1843664840, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -629,6 +641,18 @@ PrefabInstance:
     - target: {fileID: 1843664840, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843664841, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843664841, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843664841, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 282891019334375768, guid: 83a3f7bac08ced645b307a653268c633,
         type: 3}
@@ -689,6 +713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282891019971362214, guid: 83a3f7bac08ced645b307a653268c633,
+        type: 3}
+      propertyPath: lineDistance
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83a3f7bac08ced645b307a653268c633, type: 3}
