@@ -890,30 +890,14 @@ MonoBehaviour:
         - m_Target: {fileID: 425123478}
           m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
           m_MethodName: MovementSide
-          m_Mode: 3
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 425123478}
-          m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
-          m_MethodName: MovementSide
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!4 &1196325481 stripped
 Transform:
@@ -1047,23 +1031,7 @@ MonoBehaviour:
         - m_Target: {fileID: 425123478}
           m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
           m_MethodName: MovementSide
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: -1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 425123478}
-          m_TargetAssemblyTypeName: PlayerMover, Assembly-CSharp
-          m_MethodName: MovementSide
-          m_Mode: 3
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1176,6 +1144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282891019971362214, guid: 83a3f7bac08ced645b307a653268c633,
+        type: 3}
+      propertyPath: lineDistance
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83a3f7bac08ced645b307a653268c633, type: 3}

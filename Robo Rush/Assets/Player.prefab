@@ -82,6 +82,8 @@ MonoBehaviour:
   speedMove: 5
   speedSide: 3
   gravity: -9
+  lineToMove: 1
+  lineDistance: 2.5
 --- !u!143 &282891019971362213
 CharacterController:
   m_ObjectHideFlags: 0
