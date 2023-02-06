@@ -12,7 +12,6 @@ public class Pause : MonoBehaviour
     [SerializeField] private TMP_Text pauseText;
     private bool isPause;
 
-
     private void Start()
     {
         pauseImage.sprite = offPuseSprite;
@@ -33,7 +32,6 @@ public class Pause : MonoBehaviour
             pauseImage.sprite = offPuseSprite;
             pauseText.text = "";
         }
-
     }
 
     public bool IsPause()

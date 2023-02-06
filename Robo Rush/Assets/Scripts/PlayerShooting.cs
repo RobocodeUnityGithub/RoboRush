@@ -8,7 +8,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private TMP_Text currentCountManaText;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private float distanceToShooting;
-    [SerializeField] private float countMana;
+    [SerializeField] private float сountMana;
     [SerializeField] private float countOneShootMana;
     private AudioSource audioSource;
     private ParticleSystem shootParticle;
@@ -25,10 +25,10 @@ public class PlayerShooting : MonoBehaviour
 
     public void RecalulateMana(float mana)
     {
-        countMana += mana;
-        if (countMana <=0)
+        сountMana += mana;
+        if (сountMana <= 0)
         {
-            countMana = 0;
+            сountMana = 0;
         }
         UpdateUI();
     }
@@ -40,11 +40,9 @@ public class PlayerShooting : MonoBehaviour
             RaycastHit hit;
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distanceToShooting, enemyLayer) && countMana > 0)
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distanceToShooting, enemyLayer))
             {
                 Shoot();
-                countMana -= Time.deltaTime * countOneShootMana;
-                UpdateUI();
             }
             else
             {
@@ -60,18 +58,22 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shoot()
     {
-        shootParticle.enableEmission = true;
-
-        if (audioSource.isPlaying == false)
+        if(сountMana >0)
         {
-            audioSource.Play();
+            shootParticle.enableEmission = true;
+            сountMana -= Time.deltaTime * countOneShootMana;
+            UpdateUI();
+            if (audioSource.isPlaying == false)
+            {
+                audioSource.Play();
+            }
         }
     }
 
 
     private void UpdateUI() 
     {
-        currentCountManaText.text = Mathf.Round(countMana).ToString();
+        currentCountManaText.text = Mathf.Round(сountMana).ToString();
     }
 
     private void StopShoot()
